@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Analyzer</title>
+  <style>
+    :root {
+      --gradient: radial-gradient(circle at top left, #ff6b6b, #e94057, #8b5cf6, #00c6ff);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--gradient);
+      background-size: 200% 200%;
+      animation: bgScroll 15s ease infinite;
+      min-height: 100vh;
+      color: white;
+    }
+
+    @keyframes bgScroll {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      padding: 3rem 1rem 2rem;
+      text-align: center;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 40ch;
+      margin: 0 auto;
+      color: #f0f0f0;
+    }
+
+    .upload-container {
+      background: #fffdfd;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+      width: 90%;
+      max-width: 600px;
+      text-align: center;
+      margin: 2rem auto;
+      color: #000;
+    }
+
+    h2 {
+      margin-bottom: 1.2rem;
+      font-size: 1.4rem;
+      color: #111;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 1rem;
+      background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+      color: white;
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .testimonials {
+      max-width: 1200px;
+      margin: 4rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 10px;
+      color: #f9f9f9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .testimonial-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-card .author {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #fffa;
+    }
+
+    .divider {
+      height: 2px;
+      width: 80%;
+      margin: 3rem auto 1.5rem;
+      background: linear-gradient(to right, transparent, #ffffff66, transparent);
+    }
+
+    footer {
+      font-size: 0.8rem;
+      text-align: center;
+      color: #fefefeaa;
+      padding-bottom: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .testimonial-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 600px) {
+      .hero h1 {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>AI-Powered Document Analyzer</h1>
+    <p>Get smart summaries and legal insights — from PDF to Inbox in seconds.</p>
+  </section>
+
+  <div class="upload-container">
+    <h2>Complete form with correct details</h2>
+    <form
+      action="https://swot-ai25.app.n8n.cloud/webhook/upload-pqx92oa"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="form-group">
+        <label for="data">PDF File</label>
+        <input type="file" name="data" accept="application/pdf" required />
+        <small style="display:block; font-size: 0.75rem; color: #666; margin-top: 0.3rem;">
+          Max file size: 6MB
+        </small>
+      </div>
+      
+      <button type="submit">✨ Submit</button>
+    </form>
+  </div>
+
+  <section class="testimonials">
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>“Absolutely impressive. I dropped in a contract and had a full legal summary in under 2 minutes.”</p>
+        <div class="author">— Tolu Adeyemi</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“This tool is a must-have for legal reviews. Clear and concise summaries every time.”</p>
+        <div class="author">— Ifeoma N., Legal Lead</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“We use this for every supplier agreement. It saves hours and flags key clauses automatically.”</p>
+        <div class="author">— Nkechi A., Procurement Officer</div>
+      </div>
+      <div class="testimonial-card">
+        <p>“The accuracy of summaries is amazing. We’ve made it part of our due diligence toolkit.”</p>
+        <div class="author">— David K., Compliance Manager</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>&copy; 2025 Swot AI. All rights reserved.</footer>
+
+</body>
+</html>
